@@ -214,6 +214,23 @@ _data = {
 
 [node name="Game" type="Node2D"]
 
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("4_lbhrr")]
+position = Vector2(198, -10)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("4_lbhrr")]
+position = Vector2(218, -10)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("4_lbhrr")]
+position = Vector2(240, -10)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("4_lbhrr")]
+position = Vector2(152, -64)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("4_lbhrr")]
+position = Vector2(216, -63)
+
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 5
 position = Vector2(41, 2)
@@ -231,32 +248,19 @@ tile_set = SubResource("TileSet_lbhrr")
 format = 2
 layer_0/tile_data = PackedInt32Array(2, 1, 0, 1, 1, 0, 3, 1, 0, 4, 1, 0, 5, 589825, 0, 6, 655361, 0, 7, 720897, 0, -65532, 196609, 8, -131068, 196609, 7, -196604, 131073, 4, -65535, 65537, 5, 8, 1, 0, 9, 1, 0, 10, 1, 0, -196595, 1, 0, -196594, 1, 0, -196596, 1, 0, 16, 131073, 2, 17, 131073, 2, 18, 131073, 2, 19, 131073, 2, -65517, 327681, 6, -65519, 327681, 6, -65518, 524289, 6)
 
-[node name="Platform" parent="." instance=ExtResource("3_lnu2h")]
+[node name="Platforms" type="Node" parent="."]
+
+[node name="Platform" parent="Platforms" instance=ExtResource("3_lnu2h")]
 position = Vector2(151, -32)
 
-[node name="Platform2" parent="." instance=ExtResource("3_lnu2h")]
+[node name="Platform2" parent="Platforms" instance=ExtResource("3_lnu2h")]
 position = Vector2(193, 5)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
 libraries = {
 &"": SubResource("AnimationLibrary_iywne")
 }
 autoplay = "move"
-
-[node name="Coin" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(198, -10)
-
-[node name="Coin2" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(218, -10)
-
-[node name="Coin3" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(240, -10)
-
-[node name="Coin4" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(152, -64)
-
-[node name="Coin5" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(216, -63)
 
 [node name="Killzone" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(184, 67)
